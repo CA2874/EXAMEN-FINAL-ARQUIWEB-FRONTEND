@@ -1,0 +1,17 @@
+.mat-toolbar {
+  background-color: #ee1199; /* Color de fondo rojo */
+  padding: 1rem;
+}
+
+span {
+  margin: auto;
+  text-align: center;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+button {
+  margin: 0px 2px;
+}

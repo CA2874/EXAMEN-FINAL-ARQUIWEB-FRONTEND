@@ -1,0 +1,18 @@
+<div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <div class="form-group">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="creds.username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="creds.password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+      </div>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </form>
+  </div>
+  

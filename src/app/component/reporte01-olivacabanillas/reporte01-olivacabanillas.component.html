@@ -1,0 +1,30 @@
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> id </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element.id }} </mat-cell>
+    </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="ckocuserName">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ckocuserName </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.ckocuserName }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="ckocnumberMantenimientos">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> ckocnumberMantenimientos </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.ckocnumberMantenimientos }} </mat-cell>
+    </ng-container>
+
+      <!-- Value Column -->
+      <ng-container matColumnDef="ckoccostoMantenimientos">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ckoccostoMantenimientos </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{ element.ckoccostoMantenimientos }} </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+  <mat-paginator #paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 20]" [showFirstLastButtons]="true">
+  </mat-paginator>
+</div>

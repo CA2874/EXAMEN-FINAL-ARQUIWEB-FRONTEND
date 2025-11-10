@@ -1,0 +1,29 @@
+<!--mat-toolbar color="warn"-->
+  <!-- navbar.component.html -->
+  <link href="navbar.component.css" rel="stylesheet" type="text/css" />
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <span>App Name</span>
+    <span class="spacer"></span>
+    <table>
+      <tr>
+        <td>
+          <button mat-icon-button [routerLink]="['/home']">
+            <mat-icon>home</mat-icon>
+          </button>
+        </td>
+        <td>
+          <button mat-raised-button [routerLink]="'/reporte1'"> Reporte1 </button>
+        </td>
+        <td>
+          <button mat-raised-button [routerLink]="'/reporte2'"> Reporte2 </button>
+        </td>
+        <td>
+          <button mat-raised-button (click)="logout()">
+            <mat-icon>logout</mat-icon>
+          </button>
+        </td>
+      </tr>
+    </table>
+    <span>{{ username }}</span>
+  </mat-toolbar-row>
